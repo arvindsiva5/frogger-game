@@ -10,7 +10,6 @@
     "sourceMap": true,
     "baseUrl": ".",
     "incremental": true,
-    "watch": true,
     "noImplicitAny": true
   },
   "exclude": ["node_modules"],
