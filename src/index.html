@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Frogger Game</title>
+    <style>
+      BODY,
+      H2,
+      H3,
+      H4,
+      H5,
+      H6,
+      TH,
+      TD {
+        font-family: arial, helvetica, sans-serif;
+      }
+
+      H1 {
+        font-size: 38px;
+        font-family: arial, helvetica, sans-serif;
+      }
+
+      svg {
+        background-color: rgb(41, 41, 36);
+      }
+
+      p.highlight {
+        color: red;
+      }
+
+      li {
+        font-size: 18px;
+        font-family: monospace, helvetica, sans-serif;
+        line-height: 25px;
+      }
+    </style>
+  <body>
+    <h1>Frogger</h1>
+    <svg id="svgCanvas" width="600" height="600">
+      <text id="score" x="10" y="20" fill="white">Score: </text>    
+      <rect x="0" y="560" width="600" height="40" style="fill:#a844e2"></rect>
+      <rect x="0" y="310" width="600" height="40" style="fill:#a844e2"></rect>
+      <rect x="0" y="105" width="600" height="205" style="fill:#aec4f5"></rect>
+      <rect x="0" y="30" width="600" height="20" style="fill:#9da1a6"></rect>
+
+      <rect x="0" y="50" width="20" height="55" style="fill:#9da1a6"></rect>
+
+      <rect x="124" y="50" width="10" height="55" style="fill:#9da1a6"></rect>
+      <rect x="238" y="50" width="10" height="55" style="fill:#9da1a6"></rect>
+      <rect x="352" y="50" width="10" height="55" style="fill:#9da1a6"></rect>
+      <rect x="466" y="50" width="10" height="55" style="fill:#9da1a6"></rect>
+
+      <rect x="580" y="50" width="20" height="55" style="fill:#9da1a6"></rect>
+    </svg>
+    <div style="position: absolute; left:700; top:100">
+      <h3>Controls</h3>
+      <ul>
+        <li>a - left</li>
+        <li>d - right</li>
+        <li>w - up</li>
+        <li>s - down</li>
+      </ul>
+      <h3>Legend</h3>
+      <ul>
+        <li>Green Circle = Frog</li>
+        <li>White Rectangle = Car</li>
+        <li>Red Rectangle = Turtle</li>
+        <li>Brown Rectangle = Plank</li>
+        <li>Green with White on left Rectangle = Crocodile</li>
+        <li>White part on left of Green rectangle = Crocdile Mouth</li>
+      </ul>
+      <h3>Game rules</h3>
+      <ul>
+        <li>Moving up on road and not colliding with car will earn 10 points</li>
+        <li>Moving up to safezone will earn 10 points</li>
+        <li>Moving up and landing on a moving object on river will earn 10 points</li>
+        <li>Moving up and landing in distinct target area will earn 100 points</li>
+        <li>If frog collides with car on road, move into the river or move into <br>
+          crocodile mouth, frog will die and return to starting point</li>
+        <li>To complete 1 round, 5 frogs must land in the distinct target areas <br>
+        and each distinct target area only allows 1 frog to land in it</li>
+        <li>It is possible to move down and left and right when frog is in a <br>
+        a moving object in river but moving till the frog is in the river will cause<br>
+        the frog to die and return to starting point</li>
+        <li>Once a round is over all 5 frogs are removed from the distinct target <br>
+        areas and a frog is created at starting point and the new round starts</li>
+        <li>For every next round the game becomes harder as the speed of moving <br>
+        objects will increase</li>
+        <li>Turtles will dive and frog cannot land on turtle when it dives</li>
+      </ul>
+    </div>
+  </body>
+</html>
